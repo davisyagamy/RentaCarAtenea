@@ -52,9 +52,9 @@ public class ScoreService {
         }
     }
 
-    public boolean deleteScore(int id) {
+    public boolean delete(int id) {
         Boolean respuesta = getScore(id).map(score -> {
-            scoreRepository.deleted(score);
+            scoreRepository.delete(score);
             return true;
         }).orElse(false);
         return respuesta;

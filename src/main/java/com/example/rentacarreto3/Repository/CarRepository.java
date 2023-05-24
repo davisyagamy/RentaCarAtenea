@@ -19,7 +19,7 @@ public class CarRepository {
     public Car save(Car car){
         return carCrudRepository.save(car);
     }
-    public void deleted (Car car){
+    public void delete (Car car){
         carCrudRepository.delete(car);
     }
 }

@@ -4,7 +4,6 @@ import com.example.rentacarreto3.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -31,6 +30,16 @@ public class CarController {
         return carService.save(car);
     }
 
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Car update(@RequestBody Car car){
+        return carService.update(car);
+    }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean delete(@PathVariable int id){
+        return  carService.delete(id);
+    }
 
 }
