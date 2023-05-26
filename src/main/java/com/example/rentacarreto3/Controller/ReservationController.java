@@ -1,5 +1,7 @@
 package com.example.rentacarreto3.Controller;
 import com.example.rentacarreto3.Service.ReservationService;
+import com.example.rentacarreto3.model.DTOs.CompleteAndCancelled;
+import com.example.rentacarreto3.model.DTOs.TotalAndClient;
 import com.example.rentacarreto3.model.Reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,4 +38,20 @@ public class ReservationController {
     public boolean delete(@PathVariable int id){
         return  reservationService.delete(id);
     }
+
+    @GetMapping("/report-dates/{fecha1}/{fecha2}")
+    public List<Reservation>getResertavionsDatesReport(@PathVariable("fecha1")String fecha1,@PathVariable("fecha2")String fecha2){
+        return reservationService.getReservationsDateReport(fecha1,fecha2);
+    }
+
+    @GetMapping("/report-status")
+    public CompleteAndCancelled getReservationsStatus(){
+        return reservationService.getReservationsReport();
+    }
+
+    @GetMapping("/report-clients")
+    public List<TotalAndClient> getTopClientsReport(){
+        return reservationService.getTopClientsReport();
+    }
+
 }
