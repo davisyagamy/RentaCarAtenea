@@ -5,19 +5,28 @@
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    <title>Reto 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>RentaCar</title>
 </head>
-<body>
-    <h1>
-        Hola a todos este seria el front de mi proyecto
-    </h1>
-<div class="container unauthenticated">
-    Para iniciar sesión haz clic <a href="/oauth2/authorization/github">aquí</a>
-</div>
-<div class="container aunthenticated" style="display: none">
-    Has sido Autenticado <span id="usuario"></span>
-    <button onclick="location.href='homePage.html';">Continuar</button>
-</div>
+<body class="bg-image"
+  style ="background-image: url('https://wallpapercave.com/wp/wp2911084.jpg');
+         height: 100%;
+         background-repeat: no-repeat;
+         background-size: cover;
+        background-attachment: fixed;">
+
+        <div style="width: 80%; text-align: center;margin: auto;padding: 2%">
+            <h1 class="display-2 fw-bold">
+                Bienvenidos a RentaCar
+            </h1>
+            <p class="fs-1 unauthenticated">
+            Para iniciar sesión con GitHub haz clic <a href="/oauth2/authorization/github">aquí</a>
+            </p>
+            <p class="fs-2 container aunthenticated" style="display: none">
+            Bienvenido  <span id="usuario"></span><br>
+            <button class="btn btn-primary" onclick="location.href='homePage.html';">Continuar</button>
+            </p>
+        </div>
 </body>
 <script type="text/javascript">
     $.get("/user",function (data){
