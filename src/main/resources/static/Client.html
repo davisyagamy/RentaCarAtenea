@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Clients</title>
+</head>
+  <body class="bg-image"
+        style="background-image: url('https://wallpapercave.com/wp/wp2911084.jpg');
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;">
+    <div style="width: 80%; text-align: center;margin: auto;padding: 2%">
+      <h1 class="display-2 fw-bold">
+      Clients
+      </h1>
+        <div style="width: 40%;text-align: center; margin: auto;">
+            <table id = "tablaClientes" class="table table-bordered border-dark">
+
+            </table>
+        </div>
+        <h4 class="fs-2 fw-bold">Registrar Cliente</h4>
+        <div style="width: 30%;text-align: center;margin: auto;padding: 2%;">
+            <form>
+                <input class="form-control" id="name" placeholder="Nombre del Cliente"/><br>
+                <input class="form-control" id="email" placeholder="Correo del Cliente"/><br>
+                <input class="form-control" id="password" placeholder="Clave del Cliente"/><br>
+                <input class="form-control" id="age" placeholder="Edad del Cliente"/><br>
+            </form>
+            <button class="btn btn-success" onclick="guardarAdmin()"> Guardar Cliente</button><button class="btn btn-primary" onclick="location.href='homePage.html'">Volver </button>
+
+        </div>
+    </div>
+  </body>
+</html>
